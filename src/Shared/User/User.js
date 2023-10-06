@@ -6,7 +6,7 @@ const User = ({ user, index }) => {
   const [isClicked, setIsClicked] = useState(false);
   const makeAdmin = () => {
     fetch(
-      `https://shrouded-anchorage-66957.herokuapp.com/user/admin/${userId}`,
+      `${process.env.REACT_APP_BACKEND_URL}/user/admin/${userId}`,
       {
         method: "PUT",
         headers: {

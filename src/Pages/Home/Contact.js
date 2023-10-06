@@ -8,9 +8,9 @@ const Contact = () => {
         <SectionTitle title="Contact"></SectionTitle>
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="w-full">
-            <div class="card h-full bg-base-100 shadow-xl">
-              <div class="card-body">
-                <h2 class="card-title">Please Come To Visit Us</h2>
+            <div className="card h-full bg-base-100 shadow-xl">
+              <div className="card-body">
+                <h2 className="card-title">Please Come To Visit Us</h2>
                 <h4>
                   <strong>Office Location:</strong> <br />
                   5/6, block-e, lalmatia, <br /> Dhaka - 1207

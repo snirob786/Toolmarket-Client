@@ -34,44 +34,45 @@ const OrderDetails = ({
       <td>{order.paymentStatus}</td>
       <td>{order.shipmentStatus}</td>
       <td>
-        {admin === false && order.paymentStatus === "unpaid" && (
+        {(!admin && order.paymentStatus === "unpaid" && !adminLoading) ?
           <button className="btn btn-xs" onClick={paynow}>
             Pay Now
-          </button>
-        )}
+          </button> : null
+        }
 
-        {admin === true && order.paymentStatus === "unpaid" && (
-          <label
-            htmlFor="deleteTool"
-            className="btn btn-xs modal-button bg-red-500"
-            onClick={handleSelected}
-          >
-            Cancel
-          </label>
-        )}
+        {
+          (admin && order.paymentStatus === "unpaid" && !adminLoading) ?
+            <label
+              htmlFor="deleteTool"
+              className="btn btn-xs modal-button bg-red-500"
+              onClick={handleSelected}
+            >
+              Cancel
+            </label> : null
+        }
 
-        {admin === true &&
-          order.paymentStatus === "paid" &&
-          order.shipmentStatus === "pending" && (
+        {
+          (admin === true &&
+            order.paymentStatus === "paid" &&
+            order.shipmentStatus === "pending") ?
             <label
               htmlFor="shipmentRequest"
               className="btn btn-xs modal-button bg-accent"
               onClick={shipnow}
             >
               Ship Now
-            </label>
-          )}
-      </td>
-      <td>
-        {admin === false && order.paymentStatus === "unpaid" && (
-          <label
-            htmlFor="deleteTool"
-            className="btn btn-xs modal-button bg-red-500"
-            onClick={handleSelected}
-          >
-            Cancel
-          </label>
-        )}
+            </label> : null
+        }
+        {
+          (admin === false && order.paymentStatus === "unpaid") ?
+            <label
+              htmlFor="deleteTool"
+              className="btn btn-xs modal-button bg-red-500"
+              onClick={handleSelected}
+            >
+              Cancel
+            </label> : null
+        }
       </td>
     </tr>
   );

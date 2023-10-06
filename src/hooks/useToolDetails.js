@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 
 const useToolDetails = (toolId) => {
-  const url = `https://shrouded-anchorage-66957.herokuapp.com/tool/${toolId}`;
+  const url = `${process.env.REACT_APP_BACKEND_URL}/tool/${toolId}`;
   const { data, isLoading, refetch } = useQuery("tool", () =>
     fetch(url).then((res) => res.json())
   );

@@ -22,7 +22,7 @@ const AddAReview = () => {
       rating: data.rating,
     };
     if (data.review) {
-      fetch(`https://shrouded-anchorage-66957.herokuapp.com/review`, {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/review`, {
         method: "POST",
         headers: {
           "content-type": "application/json",

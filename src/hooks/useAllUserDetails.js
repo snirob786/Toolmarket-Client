@@ -8,7 +8,7 @@ const useAllUserDetails = () => {
   const [user, isLoading] = useAuthState(auth);
   const uid = user.uid;
   useEffect(() => {
-    fetch(`https://shrouded-anchorage-66957.herokuapp.com/users/${uid}`, {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/users/${uid}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

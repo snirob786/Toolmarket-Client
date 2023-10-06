@@ -6,6 +6,7 @@ const ShipmentRequest = ({
   selectedItem,
   setReload,
   shipmentRequestHandler,
+  setShipmentRequest
 }) => {
   const shipmentRequest = () => {
     if (selectedItem) {
@@ -13,7 +14,7 @@ const ShipmentRequest = ({
         shipmentStatus: "shipped",
       };
       fetch(
-        `https://shrouded-anchorage-66957.herokuapp.com/shipping/${selectedItem._id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/shipping/${selectedItem._id}`,
         {
           method: "PATCH",
           headers: {
@@ -25,6 +26,7 @@ const ShipmentRequest = ({
         .then((res) => res.json())
         .then((data) => {
           setReload(true);
+          setShipmentRequest(false)
           toast.success(
             `Congrats! Your have successfully shipped the Order : ${selectedItem._id}.`
           );
@@ -60,8 +62,7 @@ const ShipmentRequest = ({
           <div className="mt-3 flex justify-end gap-3 modal-action">
             <label
               htmlFor="shipmentRequest   "
-              className="btn btn-sm bg-green-500 border-0 text-accent hover:text-white hover:font-thin                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      "
-              onClick={shipmentRequest}
+              className="btn btn-sm bg-green-500 border-0 text-accent hover:text-white hover:font-thin" onClick={shipmentRequest}
             >
               Confirm
             </label>

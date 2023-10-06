@@ -12,7 +12,7 @@ const AddProduct = () => {
 
   const onSubmit = async (data) => {
     if (data) {
-      fetch(`https://shrouded-anchorage-66957.herokuapp.com/tool`, {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/tool`, {
         method: "POST",
         headers: {
           "content-type": "application/json",

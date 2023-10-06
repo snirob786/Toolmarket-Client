@@ -10,7 +10,7 @@ const useIsAdmin = () => {
   useEffect(() => {
     const uid = user.uid;
     if (uid) {
-      fetch(`https://shrouded-anchorage-66957.herokuapp.com/admin/${uid}`, {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/admin/${uid}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

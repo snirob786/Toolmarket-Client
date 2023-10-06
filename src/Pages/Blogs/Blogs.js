@@ -6,7 +6,7 @@ import Blog from "./Blog";
 
 const Blogs = () => {
   const { data: blogs, isLoading } = useQuery("blogs", () =>
-    fetch("https://shrouded-anchorage-66957.herokuapp.com/blogs").then((res) =>
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/blogs`).then((res) =>
       res.json()
     )
   );

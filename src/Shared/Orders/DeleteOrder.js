@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const DeleteOrder = ({ selectedItem, setReload }) => {
   const deleteTool = () => {
     fetch(
-      `https://shrouded-anchorage-66957.herokuapp.com/order/${selectedItem._id}`,
+      `${process.env.REACT_APP_BACKEND_URL}/order/${selectedItem._id}`,
       {
         method: "DELETE",
       }

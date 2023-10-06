@@ -10,7 +10,7 @@ const useMyOrders = () => {
   const [myOrders, setMyOrders] = useState([]);
   const [reload, setReload] = useState(false);
   useEffect(() => {
-    fetch(`https://shrouded-anchorage-66957.herokuapp.com/myorders/${uid}`, {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/myorders/${uid}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -16,7 +16,7 @@ const useToken = (user) => {
       userImageUrl: photoURL,
     };
     if (uId) {
-      fetch(`https://shrouded-anchorage-66957.herokuapp.com/user/${uId}`, {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/user/${uId}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

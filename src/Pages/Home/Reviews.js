@@ -4,7 +4,7 @@ import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 
 const Reviews = () => {
   const { data, isLoading } = useQuery("reviews", () =>
-    fetch("https://shrouded-anchorage-66957.herokuapp.com/reviews").then(
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/reviews`).then(
       (res) => res.json()
     )
   );

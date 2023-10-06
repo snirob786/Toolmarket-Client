@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const DeleteProduct = ({ selectedItem, refetch }) => {
   const deleteProduct = () => {
     fetch(
-      `https://shrouded-anchorage-66957.herokuapp.com/tool/${selectedItem._id}`,
+      `${process.env.REACT_APP_BACKEND_URL}/tool/${selectedItem._id}`,
       {
         method: "DELETE",
       }

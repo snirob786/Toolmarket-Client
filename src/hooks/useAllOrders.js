@@ -12,7 +12,7 @@ const useAllOrders = () => {
   const [allReload, setAllReload] = useState(false);
 
   useEffect(() => {
-    fetch(`https://shrouded-anchorage-66957.herokuapp.com/allorders/${uid}`, {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/allorders/${uid}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

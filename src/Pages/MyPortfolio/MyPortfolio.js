@@ -6,9 +6,9 @@ const MyPortfolio = () => {
     <div>
       <SectionTitle title="My Portfolio"></SectionTitle>
       <div className="w-4/5 mx-auto py-10">
-        <div class="card w-3/5 mx-auto bg-base-100 shadow-xl">
-          <div class="card-body items-center text-center">
-            <h2 class="card-title">
+        <div className="card w-3/5 mx-auto bg-base-100 shadow-xl">
+          <div className="card-body items-center text-center">
+            <h2 className="card-title">
               <strong>Name:</strong> Saifur Rahman Nirob
             </h2>
             <p>

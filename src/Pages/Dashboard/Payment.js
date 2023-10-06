@@ -21,7 +21,7 @@ const Payment = () => {
     "pk_test_51KLooKKr0u2PJAqoFyd9Mjb9ZQKIyAaxiqel1AsmLazzAvihInkBMUFeimMYyi2fDkjUV7uYIq9jXzmuMFymrOOz00lYRVv4U0"
   );
   useEffect(() => {
-    fetch(`https://shrouded-anchorage-66957.herokuapp.com/order/${orderId}`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/order/${orderId}`)
       .then((res) => res.json())
       .then((result) => {
         setOrder(result);
@@ -33,7 +33,7 @@ const Payment = () => {
   }, [orderId]);
 
   useEffect(() => {
-    fetch(`https://shrouded-anchorage-66957.herokuapp.com/tool/${productId}`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/tool/${productId}`)
       .then((res) => {
         return res.json();
       })

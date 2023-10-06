@@ -85,7 +85,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar bg-base-100 justify-between w-3/4 mx-auto">
-      <div className="navbar-start w-full">
+      <div className="navbar-start w-auto">
         <div className="dropdown w-2/3">
           <label tabIndex="0" className="btn btn-ghost lg:hidden w-full">
             <svg

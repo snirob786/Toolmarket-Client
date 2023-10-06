@@ -53,7 +53,7 @@ const MyProfile = () => {
     };
 
     if (userId) {
-      fetch(`https://shrouded-anchorage-66957.herokuapp.com/user/${userId}`, {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/user/${userId}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

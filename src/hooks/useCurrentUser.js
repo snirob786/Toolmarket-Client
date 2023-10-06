@@ -14,7 +14,7 @@ const useCurrentUser = () => {
   let from = location.state?.from?.pathname || "/dashboard";
 
   useEffect(() => {
-    fetch(`https://shrouded-anchorage-66957.herokuapp.com/user/${uid}`, {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/user/${uid}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -6,7 +6,7 @@ import Tools from "../../Shared/Tools/Tools";
 
 const Products = () => {
   const { data, isLoading } = useQuery("tools", () =>
-    fetch("https://shrouded-anchorage-66957.herokuapp.com/tools").then((res) =>
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/tools`).then((res) =>
       res.json()
     )
   );

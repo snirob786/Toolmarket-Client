@@ -16,7 +16,7 @@ const CheckoutForm = ({ order, paymentStatus, setPaymentStatus }) => {
 
   useEffect(() => {
     fetch(
-      "https://shrouded-anchorage-66957.herokuapp.com/create-payment-intent",
+      `${process.env.REACT_APP_BACKEND_URL}/create-payment-intent`,
       {
         method: "POST",
         headers: {
@@ -79,7 +79,7 @@ const CheckoutForm = ({ order, paymentStatus, setPaymentStatus }) => {
       };
 
       fetch(
-        `https://shrouded-anchorage-66957.herokuapp.com/order/${order._id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/order/${order._id}`,
         {
           method: "PATCH",
           headers: {

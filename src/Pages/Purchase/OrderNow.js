@@ -20,7 +20,7 @@ const OrderNow = ({ tool, toolId, refetch }) => {
 
   useEffect(() => {
     if (update) {
-      fetch("https://shrouded-anchorage-66957.herokuapp.com/tools", {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/tools`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",
@@ -55,7 +55,7 @@ const OrderNow = ({ tool, toolId, refetch }) => {
     };
     setOrderDetails(oderDetails);
 
-    fetch("https://shrouded-anchorage-66957.herokuapp.com/order", {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/order`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

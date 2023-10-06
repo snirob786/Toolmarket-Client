@@ -10,7 +10,7 @@ import SubscribeUs from "./SubscribeUs";
 
 const Home = () => {
   const { data, isLoading } = useQuery("tools", () =>
-    fetch("https://shrouded-anchorage-66957.herokuapp.com/tools").then((res) =>
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/tools`).then((res) =>
       res.json()
     )
   );
