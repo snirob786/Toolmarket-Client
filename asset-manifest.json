@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.46e02fa5.css",
-    "main.js": "/react-gh-pages/static/js/main.9773465a.js",
-    "static/js/787.1e8f96f3.chunk.js": "/react-gh-pages/static/js/787.1e8f96f3.chunk.js",
-    "static/media/loader.gif": "/react-gh-pages/static/media/loader.ce30fd793a5abd7004b1.gif",
-    "static/media/logo.svg": "/react-gh-pages/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.46e02fa5.css.map": "/react-gh-pages/static/css/main.46e02fa5.css.map",
-    "main.9773465a.js.map": "/react-gh-pages/static/js/main.9773465a.js.map",
-    "787.1e8f96f3.chunk.js.map": "/react-gh-pages/static/js/787.1e8f96f3.chunk.js.map"
+    "main.css": "/Toolmarket-Client/static/css/main.46e02fa5.css",
+    "main.js": "/Toolmarket-Client/static/js/main.9296bcca.js",
+    "static/js/787.1e8f96f3.chunk.js": "/Toolmarket-Client/static/js/787.1e8f96f3.chunk.js",
+    "static/media/loader.gif": "/Toolmarket-Client/static/media/loader.ce30fd793a5abd7004b1.gif",
+    "static/media/logo.svg": "/Toolmarket-Client/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Toolmarket-Client/index.html",
+    "main.46e02fa5.css.map": "/Toolmarket-Client/static/css/main.46e02fa5.css.map",
+    "main.9296bcca.js.map": "/Toolmarket-Client/static/js/main.9296bcca.js.map",
+    "787.1e8f96f3.chunk.js.map": "/Toolmarket-Client/static/js/787.1e8f96f3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.46e02fa5.css",
-    "static/js/main.9773465a.js"
+    "static/js/main.9296bcca.js"
   ]
 }
